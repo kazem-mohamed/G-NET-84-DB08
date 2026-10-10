@@ -93,7 +93,7 @@ DROP TABLE IF EXISTS dbo.PatientDrugAssignmentDemo;
 CREATE TABLE dbo.PatientDrugAssignmentDemo
 (
     PatientId INT NOT NULL,
-    DrugCode NVARCHAR(50) NOT NULL,
+    DrugCode INT NOT NULL,
     StartDate DATE NOT NULL
 );
 
@@ -112,7 +112,7 @@ DECLARE @DemoPatientId INT =
     ORDER BY Id
 );
 
-DECLARE @DemoDrugCode NVARCHAR(50) =
+DECLARE @DemoDrugCode INT =
 (
     SELECT TOP (1) Code
     FROM dbo.Drugs
